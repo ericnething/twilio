@@ -1,0 +1,56 @@
+name:                twilio
+
+-- The package version.  See the Haskell package versioning policy (PVP) 
+-- for standards guiding when and how versions should be incremented.
+-- http://www.haskell.org/haskellwiki/Package_versioning_policy
+-- PVP summary:      +-+------- breaking API changes
+--                   | | +----- non-breaking API additions
+--                   | | | +--- code changes with no API change
+version:             0.1.0.0
+synopsis:            Simple bindings to the Twilio API
+
+-- A longer description of the package.
+-- description:         
+
+license:             BSD3
+license-file:        LICENSE
+author:              Eric Nething
+maintainer:          emnething@gmail.com
+copyright:           (c) 2015 Eric Nething
+category:            Web
+build-type:          Simple
+
+-- Extra files to be distributed with the package, such as examples or a 
+-- README.
+-- extra-source-files:  
+cabal-version:       >=1.10
+
+library
+  -- Modules exported by the library.
+  exposed-modules:   Twilio
+  
+  -- Modules included in this library but not exported.
+  other-modules:     Twilio.Message
+  
+  -- LANGUAGE extensions used by modules in this package.
+  -- other-extensions:    
+  
+  -- Other library packages from which modules are imported.
+  build-depends:       base >=4.7 && <5.0
+                     , servant == 0.4.4.5
+                     , servant-client == 0.4.4.5
+                     , either
+                     , text
+                     , aeson
+                     , bytestring
+                     , base64-bytestring
+  
+  -- Directories containing source files.
+  hs-source-dirs:      src
+  
+  -- Base language which the package is written in.
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/ericnething/twilio
