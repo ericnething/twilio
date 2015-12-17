@@ -37,8 +37,8 @@ library
   
   -- Other library packages from which modules are imported.
   build-depends:       base >=4.7 && <5.0
-                     , servant == 0.4.4.5
-                     , servant-client == 0.4.4.5
+                     , servant         < 0.5.0.0
+                     , servant-client  < 0.5.0.0
                      , either
                      , text
                      , aeson
