@@ -17,6 +17,9 @@ module Twilio
        , EncodedAuthToken (..)
        , Message (..)
        , MessageResponse (..)
+       , MessageStatus (..)
+       , ErrorCode (..)
+       , TwilioException (..)
        ) where
 
 import           Control.Monad.Trans.Either
