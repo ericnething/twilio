@@ -141,16 +141,16 @@ instance FromJSON ErrorCode where
 -- * Exceptions
 -------------------------------------------------------------------------------
 
-data TwilioException = TwilioException
+data Exception = Exception
   { exceptionStatus   :: Int
   , exceptionMessage  :: Text
   , exceptionCode     :: Maybe ErrorCode
   , exceptionMoreInfo :: Maybe Text
   } deriving Show
 
-instance FromJSON TwilioException where
+instance FromJSON Exception where
   parseJSON (Object o) =
-    TwilioException
+    Exception
     <$> o .: "status"
     <*> o .: "message"
     <*> o .:? "code"

@@ -19,7 +19,7 @@ module Twilio
        , MessageResponse (..)
        , MessageStatus (..)
        , ErrorCode (..)
-       , TwilioException (..)
+       , Exception (..)
        ) where
 
 import           Control.Monad.Trans.Either
